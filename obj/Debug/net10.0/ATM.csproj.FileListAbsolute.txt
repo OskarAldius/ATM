@@ -1,0 +1,14 @@
+C:\Users\yokoj\ATM\bin\Debug\net10.0\ATM.exe
+C:\Users\yokoj\ATM\bin\Debug\net10.0\ATM.deps.json
+C:\Users\yokoj\ATM\bin\Debug\net10.0\ATM.runtimeconfig.json
+C:\Users\yokoj\ATM\bin\Debug\net10.0\ATM.dll
+C:\Users\yokoj\ATM\bin\Debug\net10.0\ATM.pdb
+C:\Users\yokoj\ATM\obj\Debug\net10.0\ATM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yokoj\ATM\obj\Debug\net10.0\ATM.AssemblyInfoInputs.cache
+C:\Users\yokoj\ATM\obj\Debug\net10.0\ATM.AssemblyInfo.cs
+C:\Users\yokoj\ATM\obj\Debug\net10.0\ATM.csproj.CoreCompileInputs.cache
+C:\Users\yokoj\ATM\obj\Debug\net10.0\ATM.dll
+C:\Users\yokoj\ATM\obj\Debug\net10.0\refint\ATM.dll
+C:\Users\yokoj\ATM\obj\Debug\net10.0\ATM.pdb
+C:\Users\yokoj\ATM\obj\Debug\net10.0\ATM.genruntimeconfig.cache
+C:\Users\yokoj\ATM\obj\Debug\net10.0\ref\ATM.dll

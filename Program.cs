@@ -4,21 +4,26 @@ namespace ATM;
 
 class Program
 {
-    // static Account account = new Account("1234-5678");
-    static SavingsAccount account = new("1234-5678") { };
-    // static Account account = new("1234-5678") { };
+   
+    static Account account_1 = new("1111-5678", "Eva","Nilsson");
+    static SavingAccount account_2 = new("1111-5678", "Eva","Nilsson") ;
 
-    // static Account account = new() { accountNumber = "1234-5678" };
+    static List<Account> accounts =[];
+
+    
 
     static void Main()
     {
-        account.FirstName = "Michael";
+        accounts.Add(account_1);
+        accounts.Add(account_2);
+        
         // Här är vår enkla meny...
         Console.WriteLine("--------------------------------------------------");
         Console.WriteLine("För att sätta in tryck på tangenten 'd'");
         Console.WriteLine("För att ta ut tryck på tangenten 'w'");
         Console.WriteLine("För att se saldo tryck på tangenten 'b'");
         Console.WriteLine("För att se transaktionerna tryck på tangenten 't'");
+        Console.WriteLine("För att se kontouppgifter tryck på tangenten 'k'");
         Console.WriteLine("För att avsluta tryck på tangenten 'x'");
         Console.WriteLine("--------------------------------------------------");
 
@@ -45,6 +50,9 @@ class Program
                         break;
                     case "t":
                         DisplayTransactions();
+                        break;
+                        case "k":
+                        DisplayAccounts();
                         break;
                     case "d":
                         Console.WriteLine("Hur mycket vill du sätta in?");
@@ -98,23 +106,40 @@ class Program
 
     static void Deposit(int amount)
     {
-        account.Deposit(amount);
+        //Account referesen
+        account_1.Deposit(amount);
+        //savingAccount refrence
+        account_2.Deposit(amount);
     }
 
     static void WithDraw(int amount)
     {
-        account.WithDraw(amount);
+        account_1.WithDraw(amount);
     }
     static void DisplayBalance()
     {
-        Console.WriteLine($"Ditt nuvarande saldo: {account.Balance}");
+        var b= account_1.Balance;
+        Console.WriteLine($"Ditt nuvarande saldo: {account_1.Balance}");
     }
 
     static void DisplayTransactions()
     {
-        foreach (var tran in account.Transactions)
+        foreach (var tran in account_1.Transactions)
         {
             Console.WriteLine(tran.ToString());
         }
+        foreach (var tran in account_2.Transactions)
+        {
+            Console.WriteLine(tran.ToString());
+        }
+    }
+    static void DisplayAccounts()
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        foreach(var Account in accounts)
+        {
+            System.Console.WriteLine(Account.Balance);
+        }
+        Console.ResetColor();
     }
 }

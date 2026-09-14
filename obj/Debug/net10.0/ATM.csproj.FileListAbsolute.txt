@@ -12,3 +12,4 @@ C:\Users\yokoj\ATM\obj\Debug\net10.0\refint\ATM.dll
 C:\Users\yokoj\ATM\obj\Debug\net10.0\ATM.pdb
 C:\Users\yokoj\ATM\obj\Debug\net10.0\ATM.genruntimeconfig.cache
 C:\Users\yokoj\ATM\obj\Debug\net10.0\ref\ATM.dll
+C:\Users\yokoj\ATM\obj\Debug\net10.0\ATM.sourcelink.json

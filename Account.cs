@@ -2,15 +2,18 @@ namespace WestcoastBank;
 
 
 
-public class Account(string accountNo)
+public class Account(string accountNumber, string firstName, string lastName) // ----konstruktor
 {
-    public virtual int Balance { get; private set; }
-    public string AccountNumber { get; } = accountNo;
-    public string? FirstName { get; set; }
-    public string? LastName { get; set; }
-    public List<Transaction> Transactions { get; } = [];
 
-    public void Deposit(int amount)
+
+    public virtual int Balance { get;  set; } //--- virtual betyder den här är möjlig att osidosätta/ hantera 
+    public string AccountNumber { get; } = accountNumber;
+    Customer Custmer {get; set;} = new(){FirstName = firstName, LastName = lastName};
+    
+    public List<Transaction> Transactions { get; } = [];
+    
+
+    public virtual void Deposit(int amount)
     {
         Balance += amount;
         AddTransaction(amount, TransactionTypeEnum.Insättning);
@@ -27,7 +30,7 @@ public class Account(string accountNo)
         AddTransaction(amount, TransactionTypeEnum.Uttag);
     }
 
-    private void AddTransaction(int amount, TransactionTypeEnum type)
+    protected void AddTransaction(int amount, TransactionTypeEnum type) // protected öppnar inte upp för någon annan än barnen
     {
         Transaction tran = new()
         {

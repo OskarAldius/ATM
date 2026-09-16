@@ -1,7 +1,7 @@
 ﻿namespace WestcoastBank;
 
-public class SavingAccount(string accountNo, string fname, string lname):
-Account(accountNo, fname,lname)
+public class SavingAccount(string accountNo):
+Account(accountNo)
 {
     //public SavingAccount(string accountNo):base(accountNo) gammla sättet 
 
@@ -13,14 +13,5 @@ Account(accountNo, fname,lname)
     
     public double InterestRate { get; set; }
 
-    public void CalculateInsterest()
-    {
-        
-    }
-public override void Deposit(int amount)
-    {
-        base.Balance += amount;
-    AddTransaction(amount, TransactionTypeEnum.Insättning);
-    }
 
 }

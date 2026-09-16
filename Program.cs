@@ -1,12 +1,12 @@
-﻿using WestcoastBank;
+﻿namespace WestcoastBank;
 
-namespace ATM;
+
 
 class Program
 {
    
-    static Account account_1 = new("1111-5678", "Eva","Nilsson");
-    static SavingAccount account_2 = new("1111-5678", "Eva","Nilsson") ;
+    static Account account_1 = new("1111-5678");
+    static SavingAccount account_2 = new("1111-5678") ;
 
     static List<Account> accounts =[];
 
@@ -130,7 +130,7 @@ class Program
         }
         foreach (var tran in account_2.Transactions)
         {
-            Console.WriteLine(tran.ToString());
+            Console.WriteLine(tran.ToString() + " Ränta");
         }
     }
     static void DisplayAccounts()
